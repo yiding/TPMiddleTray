@@ -39,7 +39,14 @@ namespace TPMiddleTray {
     }
 
     private void Worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e) {
-      notifyIcon.Text = $"TPMiddleTray: Failed with {e.Error}";
+      if (e.Error != null) {
+        notifyIcon.Text = $"TPMiddleTray: encountered error";
+        MessageBox.Show(
+          $"Error: {e.Error.Message}\n\n{e.Error.InnerException?.Message}", 
+          "TPMiddleTray failed to start",
+          MessageBoxButtons.OK);
+        CleanupAndExit();
+      }
     }
 
     private void MiddleClickProcessor_DevicesEnumerated(int nDevices) {
@@ -47,9 +54,12 @@ namespace TPMiddleTray {
     }
 
     private void OnExit(object sender, EventArgs e) {
+      CleanupAndExit();
+    }
+
+    private void CleanupAndExit() {
       notifyIcon.Visible = false;
       Application.Exit();
     }
-
   }
 }

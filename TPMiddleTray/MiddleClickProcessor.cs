@@ -8,6 +8,11 @@ using SYNCOMLib;
 
 namespace TPMiddleTray {
 
+  class COMInitializationFailedException : Exception {
+    internal COMInitializationFailedException(string msg, Exception e) : base(msg, e) {
+    }
+  }
+
   sealed class DeviceHandler : IDisposable {
     private readonly ISynDevice device;
     private bool middleButtonDown = false;
@@ -126,7 +131,13 @@ namespace TPMiddleTray {
     }
 
     public void WorkLoop() {
-      synapi = new SynAPI();
+      try {
+        synapi = new SynAPI();
+      } catch (COMException e) {
+        // COMException here indicates that SynAPI is not installed.
+        // Throw an exception to indicate this to the caller.
+        throw new COMInitializationFailedException("Synaptics driver version incorrect or not installed", e);
+      }
       synapi.Initialize();
       synapi.SetEventNotification(apiEvent.SafeWaitHandle);
 
