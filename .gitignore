@@ -1,0 +1,6 @@
+SYNCOMLib/SYNCOMLib.dll
+.vs
+*.csproj.user
+Debug/
+Release/
+obj/
