@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30204.135
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPMiddleTray", "TPMiddleTray\TPMiddleTray.csproj", "{7B54DD2B-797A-4D88-A9B5-1D94845E7B08}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SYNCOMLib", "SYNCOMLib\SYNCOMLib.csproj", "{6FC9B08B-EDBC-4631-AFC3-69B492C17071}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Installer", "Installer\Installer.vdproj", "{8AC9A5F9-7322-4C55-BEA1-E1C95A7A9E72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,17 @@ Global
 		{6FC9B08B-EDBC-4631-AFC3-69B492C17071}.Release|x64.Build.0 = Release|Any CPU
 		{6FC9B08B-EDBC-4631-AFC3-69B492C17071}.Release|x86.ActiveCfg = Release|Any CPU
 		{6FC9B08B-EDBC-4631-AFC3-69B492C17071}.Release|x86.Build.0 = Release|Any CPU
+		{8AC9A5F9-7322-4C55-BEA1-E1C95A7A9E72}.Debug|Any CPU.ActiveCfg = Debug
+		{8AC9A5F9-7322-4C55-BEA1-E1C95A7A9E72}.Debug|ARM.ActiveCfg = Debug
+		{8AC9A5F9-7322-4C55-BEA1-E1C95A7A9E72}.Debug|ARM64.ActiveCfg = Debug
+		{8AC9A5F9-7322-4C55-BEA1-E1C95A7A9E72}.Debug|x64.ActiveCfg = Debug
+		{8AC9A5F9-7322-4C55-BEA1-E1C95A7A9E72}.Debug|x86.ActiveCfg = Debug
+		{8AC9A5F9-7322-4C55-BEA1-E1C95A7A9E72}.Release|Any CPU.ActiveCfg = Release
+		{8AC9A5F9-7322-4C55-BEA1-E1C95A7A9E72}.Release|Any CPU.Build.0 = Release
+		{8AC9A5F9-7322-4C55-BEA1-E1C95A7A9E72}.Release|ARM.ActiveCfg = Release
+		{8AC9A5F9-7322-4C55-BEA1-E1C95A7A9E72}.Release|ARM64.ActiveCfg = Release
+		{8AC9A5F9-7322-4C55-BEA1-E1C95A7A9E72}.Release|x64.ActiveCfg = Release
+		{8AC9A5F9-7322-4C55-BEA1-E1C95A7A9E72}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
